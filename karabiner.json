@@ -406,6 +406,41 @@
                                     }
                                 ],
                                 "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "equal_sign"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "equal_sign",
+                                        "modifiers": [
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
                             }
                         ]
                     }
@@ -1018,18 +1053,18 @@
                     "simple_modifications": [
                         {
                             "from": {
-                                "key_code": "international5"
-                            },
-                            "to": {
-                                "key_code": "left_gui"
-                            }
-                        },
-                        {
-                            "from": {
                                 "key_code": "international4"
                             },
                             "to": {
                                 "key_code": "right_gui"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "international5"
+                            },
+                            "to": {
+                                "key_code": "left_gui"
                             }
                         },
                         {

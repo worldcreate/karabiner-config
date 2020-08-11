@@ -272,6 +272,49 @@
           ]
         }
       ]
+    },
+    {
+      "description": "right_controlと無変換、変換でかな、英数変換",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_command",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "japanese_eisuu"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "right_command",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "japanese_kana"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
     }
   ]
 }

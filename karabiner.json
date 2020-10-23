@@ -180,50 +180,48 @@
                                     "key_code": "quote"
                                 },
                                 "to": [
-                                    {
-                                        "key_code": "right_control"
-                                    }
+                                  {
+                                    "set_variable": { "name": "altgr_flg", "value": 1 }
+                                  }
+                                ],
+                                "to_after_key_up": [
+                                  { "set_variable": { "name": "altgr_flg", "value": 0 } }
+                                ],
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 0 }
                                 ],
                                 "type": "basic"
                             },
                             {
+                              "type": "basic",
+                              "from": {
+                                "key_code": "semicolon"
+                              },
+                              "to": [
+                                { "key_code": "left_shift" }
+                              ],
+                              "conditions": [
+                                { "type": "variable_if", "name": "altgr_flg", "value": 1 }
+                              ]
+                            },
+                            {
                                 "from": {
-                                    "key_code": "a",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
+                                  "key_code": "a",
+                                  "modifiers": {
+
+                                    "optional": [
+                                      "any"
+                                    ]
+                                  }
+
                                 },
                                 "to": [
                                     {
                                         "key_code": "hyphen"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
-                                    }
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
                                 ],
                                 "type": "basic"
                             },
@@ -231,9 +229,6 @@
                                 "from": {
                                     "key_code": "s",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -247,15 +242,15 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "d",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -269,15 +264,15 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -288,15 +283,15 @@
                                         "key_code": "open_bracket"
                                     }
                                 ],
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "g",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -307,49 +302,8 @@
                                         "key_code": "close_bracket"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "open_bracket",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "g",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "close_bracket",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
-                                    }
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
                                 ],
                                 "type": "basic"
                             },
@@ -357,9 +311,6 @@
                                 "from": {
                                     "key_code": "q",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -370,40 +321,8 @@
                                         "key_code": "quote"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_option"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "quote",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
-                                    }
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
                                 ],
                                 "type": "basic"
                             },
@@ -411,34 +330,19 @@
                                 "from": {
                                     "key_code": "z",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ]
+                                      "optional": [
+                                        "any"
+                                      ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "equal_sign"
+
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "z",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "equal_sign",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
-                                    }
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
                                 ],
                                 "type": "basic"
                             },
@@ -446,9 +350,6 @@
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "left_control"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -459,27 +360,51 @@
                                         "key_code": "delete_or_backspace"
                                     }
                                 ],
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
+                                ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "right_controlと無変換、変換でかな、英数変換",
-                        "manipulators": [
+                            },
                             {
                                 "from": {
-                                    "key_code": "left_command",
+                                    "key_code": "j",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
                                     }
                                 },
                                 "to": [
-                                  { "key_code": "japanese_eisuu"}
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "altgr_flgと無変換、変換でかな、英数変換",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "japanese_eisuu"
+                                    }
+                                ],
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
                                 ],
                                 "type": "basic"
                             },
@@ -487,16 +412,18 @@
                                 "from": {
                                     "key_code": "right_command",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
                                     }
                                 },
                                 "to": [
-                                  { "key_code": "japanese_kana"}
+                                    {
+                                        "key_code": "japanese_kana"
+                                    }
+                                ],
+                                "conditions": [
+                                  { "type": "variable_if", "name": "altgr_flg", "value": 1 }
                                 ],
                                 "type": "basic"
                             }
